@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-row >
+    <ion-col style="background:#28a745;border-radius: 10px;margin:10px;">
+      <ion-label style="color:white;">
+        Total Recebido <br />
+        R$ {{ObjTotais.recebido}}
+      </ion-label>
+    </ion-col>
+
+    <ion-col style="background:#dc3545;border-radius: 10px;margin:10px">
+      <ion-label style="color:white;">
+        Total a Receber
+        R$ {{ObjTotais.receber}}
+      </ion-label>
+    </ion-col>
+  </ion-row>
+
+  <div padding>
+
+    <div id="barchart_material">
+
+    </div>
+  </div>
+
+</ion-content>

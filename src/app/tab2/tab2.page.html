@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Mensalistas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <div padding>
+    <ion-input name="txtPesquisar" type="text" placeholder="Pesquisar ..."  (input)='exibeMensalistas($event.target.value)'></ion-input>
+  </div>  
+
+  <div *ngIf="ShowMensalistas.length == 0">
+    <ion-item style="text-align: center">
+      Nenhuma informação Encontrada :/
+    </ion-item>
+  </div>
+
+  <ion-list *ngFor="let Item of ShowMensalistas;">
+    <ion-item (click)="ClickResumo(Item)">
+      <ion-icon name="contact" item-left></ion-icon>
+      <ion-label>{{Item.Nome}}</ion-label>
+      <ion-label>Mensalidade: #{{Item.Codigo}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

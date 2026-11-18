@@ -1,0 +1,42 @@
+<ion-header color="red" style="background:#3880ff"> <!--#f1bc19 #ee3e54 #84a7d7 #fce0a2-->
+  <ion-toolbar  color="red">
+    <ion-title style="color: white">IParking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> <!--  color="primary" -->
+  <form  #form="ngForm" (ngSubmit)="formLogin(form)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+         
+          <div padding>
+  
+            <ion-img height="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYNc0IPxKFLaPkLTllNVTSdtzLFkI2LQZu53LGqdT5y5q1SUyfPA&s"></ion-img>
+
+        
+              <ion-input name="login" type="text" placeholder="Login" ngModel="" required></ion-input>
+           
+
+              <ion-input name="senha" type="password"  placeholder="Senha" ngModel="" required></ion-input>
+           
+            
+            <div>
+                <ion-button type="submit" [disabled]="form.invalid" expand="block">Entrar</ion-button>
+              </div>
+
+          </div>
+          
+          <div class="alignRight">
+              <ion-label class="fontGray">Esqueceu a senha ?</ion-label>
+          </div>
+          
+          <div class="alignCenter criarConta">
+              <ion-label class="fontGray">Crie já sua Conta</ion-label>
+          </div>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
